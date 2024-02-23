@@ -6,12 +6,14 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { signIn, signOut } from 'next-auth/react';
 import Image from 'next/image';
-import UniLy4eIcon from './components/UniLy4eIcon';
-import UniLy4eIconv2 from '@/public/images/UniLy4eIcon.png'
+import UniLy4eIcon from '@/public/images/UniLy4eIcon.png';
 
 const navigation = [
-  { name: 'Dashboard', href: '/' },
-  { name: 'Playground', href: '/playground' }
+  { name: 'Home', href: '/' },
+  { name: 'Clubs', href: '/clubs' },
+  { name: 'Events', href: '/events' },
+  { name: 'Opportunities', href: '/opportunities' },
+  { name: 'Blog', href: '/blog' }
 ];
 
 function classNames(...classes: string[]) {
@@ -30,7 +32,7 @@ export default function Navbar({ user }: { user: any }) {
               <div className="flex">
                 <div className="flex bg-white">
                   <Image
-                    src={UniLy4eIconv2}
+                    src={UniLy4eIcon}
                     width={150}
                     height={100}
                     alt="UniLy4e Icon"
